@@ -1,0 +1,42 @@
+{
+  "name": "astrum-school-bot",
+  "version": "1.0.0",
+  "description": "Source Code of Astrum School Bot on Telegram",
+  "main": "build/main.js",
+  "scripts": {
+    "start": "npm run bundle && npm run postbundle && nodemon ./build/main.js",
+    "bundle": "tsc",
+    "postbundle": "copyfiles -u 1 ./public/**/* build/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shuklarituparn/Astrum-School-Bot.git"
+  },
+  "keywords": [
+    "telegram bot",
+    "astrum",
+    "astrum school"
+  ],
+  "author": "shuklarituparn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shuklarituparn/Astrum-School-Bot/issues"
+  },
+  "homepage": "https://github.com/shuklarituparn/Astrum-School-Bot#readme",
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "dotenv": "^16.0.3",
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "@types/cron": "^2.0.1",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.17",
+    "cron": "^2.3.0",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.3",
+    "telegraf": "^4.12.2"
+  }
+}
